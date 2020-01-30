@@ -9,5 +9,19 @@ namespace BST
     class Tree
     {
 
+        public Node NewNode(int data)
+        {
+            Node temp = new Node();
+            temp.key = data;
+            temp.left = null;
+            temp.right = null;
+
+            return temp;
+        }
+
+        public Node Add(Node node, int key)
+        {
+            
+        }
     }
 }

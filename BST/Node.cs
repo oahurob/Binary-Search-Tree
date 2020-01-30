@@ -8,7 +8,7 @@ namespace BST
 {
     class Node
     {
-        public int value;
+        public int key;
         public Node left;
         public Node right;
     }
