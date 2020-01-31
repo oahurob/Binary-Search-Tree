@@ -29,11 +29,11 @@ namespace BST
             {
                 before = after;
 
-                if(key < after.data)
+                if(key <= after.data)//
                 {
                     after = after.left;
                 }
-                else if(key > after.data)
+                else if(key > after.data)//
                 {
                     after = after.right;
                 }
@@ -42,7 +42,7 @@ namespace BST
                     return false;
                 }
 
-                newNode.data = key;
+                newNode.data = key;//
             }
             if (this.Root == null)
             {
@@ -50,7 +50,7 @@ namespace BST
             }
             else
             {
-                if (key < before.data)
+                if (key <= before.data)//
                 {
                     before.left = newNode;
                 }
@@ -60,6 +60,47 @@ namespace BST
                 }
             }
             return true;
+
+        }
+
+        public bool Search(int key)
+        {
+            Node temp = Root;
+
+            while (true)
+            {
+
+                if (temp.key == key)
+                {
+                    return true;
+                }
+
+                if (temp.left == null)
+                {
+                    return false;
+                }
+                else if (temp.left.key == key)
+                {
+                    return true;
+                }
+                else
+                {
+                    temp = temp.left;
+                }
+
+                if (temp.right == null)
+                {
+                    return false;
+                }
+                else if (temp.right.key == key)
+                {
+                    return true;
+                }
+                else
+                {
+                    temp = temp.right;
+                }
+            }
 
         }
     }
