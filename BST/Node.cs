@@ -6,10 +6,16 @@ using System.Threading.Tasks;
 
 namespace BST
 {
-    class Node
+    public class Node
     {
         public int key;
         public Node left;
         public Node right;
+        public int data { get; set; }
+
+        public Node()
+        {
+
+        }
     }
 }

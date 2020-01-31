@@ -10,7 +10,10 @@ namespace BST
     {
         static void Main(string[] args)
         {
-
+            Node node = new Node();
+            Tree tree = new Tree();
+            tree.Add(6);
+            Console.ReadLine();
         }
     }
 }
